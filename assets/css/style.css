@@ -1074,9 +1074,6 @@ body {
     --fs-3: 3.2rem;
 
   }
-
-
-
   /**
    * REUSED STYLE
    */
@@ -1105,4 +1102,16 @@ body {
 
   .footer { padding-block-start: 40px; }
 
+}
+.product-list {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples filas si es necesario */
+  gap: 20px; /* Espaciado entre los elementos */
+  list-style: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina el padding de la lista */
+}
+
+.product-card {
+  flex: 1 1 360px; /* Hace que cada tarjeta sea flexible y ocupe un ancho mínimo de 360px */
+  max-width: 360px; /* Limita el ancho máximo de cada tarjeta */
 }
