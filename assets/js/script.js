@@ -61,3 +61,25 @@ const activeElemOnScroll = function () {
 }
 
 addEventOnElem(window, "scroll", activeElemOnScroll);
+
+/*Funcionamiento del carrusel */
+const carousel = document.querySelector('.carousel');
+const items = document.querySelectorAll('.carousel-item');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+
+let index = 0;
+
+const updateCarousel = () => {
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+};
+
+prevBtn.addEventListener('click', () => {
+    index = (index > 0) ? index - 1 : items.length - 1;
+    updateCarousel();
+});
+
+nextBtn.addEventListener('click', () => {
+    index = (index < items.length - 1) ? index + 1 : 0;
+    updateCarousel();
+});

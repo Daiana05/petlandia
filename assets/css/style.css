@@ -1115,3 +1115,53 @@ body {
   flex: 1 1 360px; /* Hace que cada tarjeta sea flexible y ocupe un ancho mínimo de 360px */
   max-width: 360px; /* Limita el ancho máximo de cada tarjeta */
 }
+
+/*styles del carrusel*/
+.carousel-container {
+  position: relative;
+  max-width: 800px;
+  margin: 50px auto;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item img {
+  width: 70%; /* Asegura que ocupe todo el ancho */
+  height: auto; /* Asegura que ocupe todo el alto */
+  max-height: 100%; /* Cubre todo el contenedor, aunque recorte la imagen */
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.control {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.control:focus {
+  outline: none;
+}
